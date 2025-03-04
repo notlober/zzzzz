@@ -5,7 +5,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 generator = pipeline("text-generation", model=model_path, tokenizer=tokenizer)
 
 test_prompts = [
-    "how many r's in strawberry"
+    "Human: " + "how many r's in strawberry" + "\n\nAI: "
 ]
 
 print("\n===== TESTING FINE-TUNED MODEL =====\n")
