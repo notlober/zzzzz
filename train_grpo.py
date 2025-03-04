@@ -7,7 +7,7 @@ dataset = load_dataset("simplescaling/s1K-1.1", split="train")
 
 def prepare_dataset(example):
     return {
-        "prompt": example["question"],
+        "prompt": "Human: " + example["question"] + "\n\nAI: ",
         "deepseek_thinking_trajectory": example["deepseek_thinking_trajectory"],
         "deepseek_attempt": example["deepseek_attempt"]
     }
@@ -49,7 +49,7 @@ def reward_fn(completions, prompts, **kwargs):
 training_args = GRPOConfig(
     output_dir="Qwen2.5-0.5B-GRPO",
     logging_steps=1,
-    max_completion_length=1024,
+    max_completion_length=512,
     max_prompt_length=512,
     max_steps=100,
 )

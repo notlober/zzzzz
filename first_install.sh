@@ -1,1 +1,1 @@
-pip install FlagEmbedding trl transformers datasets accelerate torch torchvision -U
+pip3 install FlagEmbedding trl transformers datasets accelerate torch torchvision torchaudio -U --pre --index-url https://download.pytorch.org/whl/nightly/cu128
