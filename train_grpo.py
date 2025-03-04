@@ -68,6 +68,6 @@ api = HfApi()
 
 api.upload_folder(
     folder_path="Qwen2.5-0.5B-GRPO/checkpoint-100",
-    repo_id="notlober/kaime",
+    repo_id="notlober/kaim",
     repo_type="model",
 )
